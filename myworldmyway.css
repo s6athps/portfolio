@@ -1,0 +1,224 @@
+#myway-image-container1{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+#image1-div1{
+    display: flex;
+    align-items: center;
+    height: 250px;
+    
+}
+#image1-div2{
+    display: flex;
+    align-items: center;
+    height: 250px;
+    
+}
+#image1-div3{
+    display: flex;
+    align-items: center;
+    height: 250px;
+    
+}
+#image1-div4{
+    display: flex;
+    align-items: center;
+    
+    height: 500px;
+    
+}
+#image1-div5{
+    display: flex;
+    align-items: center;
+    height: 250px;
+    
+}
+
+#right-arrow{
+    width: 200px;
+    height: 200px;
+}
+#travel-pic{
+    width: 600px;
+    height: 400px;
+}
+#myway-image-container2{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+#image2-div1{
+    display: flex;
+    align-items: center;
+    height: 250px;
+    
+}
+#image2-div2{
+    display: flex;
+    align-items: center;
+    height: 250px;
+    
+}
+#image2-div3{
+    display: flex;
+    align-items: center;
+    height: 250px;
+    
+}
+#image2-div4{
+    display: flex;
+    align-items: center;
+    
+    height: 500px;
+    
+}
+#image2-div5{
+    display: flex;
+    align-items: center;
+    height: 250px;
+    
+}
+
+
+
+#right-arrow2{
+    width: 250px;
+    height: 250px;
+    margin-left: 20px;
+}
+#peace-pic{
+    width: 600px;
+    height: 400px;
+    margin-left: 4px;
+}
+#connect-withme-logo-container{
+    width: 100%;
+    height: 200px;
+    background-color: rgba(20, 133, 34, 0.5); /* semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply blur to the background */
+
+}
+#linkedin-logo{
+    width: 90px;
+    height: 90px;
+}
+#socialmedia-icons-container{
+    height: 100px;
+    width: 700px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#facebook-logo{
+    width: 90px;
+    height: 90px;
+}
+#linkedin-logo:hover{
+    background-blend-mode: multiply; /* Blend mode */
+    background-color: rgba(29, 106, 34, 0.5); /* Red tint with transparency */
+}
+#facebook-logo:hover{
+    background-blend-mode: multiply; /* Blend mode */
+    background-color: rgba(29, 106, 34, 0.5); /* Red tint with transparency */
+}
+#connect {
+    font-size: 34px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Dot Styling and Animation */
+.dot {
+    display: inline-block;
+    animation: wave 1.5s infinite ease-in-out;
+}
+  
+.dot:nth-child(2) {
+    animation-delay: 0.3s; /* Second dot starts slightly later */
+}
+  
+.dot:nth-child(3) {
+    animation-delay: 0.6s; /* Third dot starts even later */
+}
+  
+@keyframes wave {
+    0%, 100% {
+      opacity: 0.3;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-5px); /* Moves the dot slightly up */
+    }
+}
+/* Container Styling */
+
+.spin-image {
+
+    height: auto;
+    animation: spin-vertical 2s infinite linear;
+  }
+  
+  /* Vertical Spin Animation */
+  @keyframes spin-vertical {
+    0% {
+      transform: rotateX(0deg);
+    }
+    100% {
+      transform: rotateX(360deg);
+    }
+  }
+  
+/* Add this CSS code to your stylesheet */
+
+/* Add this CSS code to your stylesheet */
+body::after {
+    content: "Extra small: <576px";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: black;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    z-index: 1000;
+}
+
+
+
+
+
+@media (min-width: 576px) {
+  body::after {
+    content: "Small: ≥576px";
+}
+}
+  
+@media (min-width: 768px) {
+body::after {
+    content: "Medium: ≥768px";
+}
+}
+  
+@media (min-width: 992px) {
+body::after {
+      content: "Large: ≥992px";
+}
+}
+  
+@media (min-width: 1200px) {
+body::after {
+    content: "Extra Large: ≥1200px";
+}
+}
+  
+@media (min-width: 1400px) {
+body::after {
+    content: "XXL: ≥1400px";
+}
+}

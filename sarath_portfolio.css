@@ -1,0 +1,215 @@
+
+/*profile photo*/
+#dp-designation-container{
+    height: 500px;
+    width: 400px;
+    background: green;
+    margin-left: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+#my-profile-pic{
+    width: 490px;
+    height: 500px;
+    position: absolute;
+    
+}
+body{
+    margin: 0;
+}
+/*my name*/
+#my-name-pic-container{
+    width: 670px;
+    height: 120px;
+    background-color: rgb(199, 126, 122);
+    margin-top: -475px;
+    margin-left: 695px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#my-name-pic-container img{
+    height: 120px;
+    width: 670px;
+    object-fit: cover;
+}
+
+
+/*main page background image*/
+#main-content-background-pic-container{
+    width: 100%;
+    height: 100%;
+    margin-top: -330px;
+    object-fit: cover;
+}
+#main-content-background-pic-container img{
+    width: 100%;
+    height: 1000px;
+    object-fit: cover;
+    
+}
+
+/* about me */
+#about-me-skills{
+    width: 600px;
+    height: 230px;
+    position: absolute;
+    
+    margin-left: 220px;
+    margin-top: 530px;
+    position: absolute;
+}
+#about-me-skills h1{
+    font-size: 20px;
+    font-weight: lighter;
+    color: white;
+    font-family: 'Lobster', cursive;
+}
+.buttons-mainpage-container{
+    height: 300px;
+    width: 250px !important;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /*back ground color for buttons main page*/
+    margin-left: 710px;
+    margin-top: 200px !important;
+    position: absolute;
+}
+.buttons-mainpage-container button{
+    color: black;
+    width: 200px;
+    margin-top: 15px;
+    text-align: left;
+    height:40px;
+    font-size: 17px;
+    border-width: 1px; 
+    border-style: solid; 
+    border-color: rgb(192, 191, 191);
+    border-radius: 10px;
+    
+    
+}
+#main-button1:hover{
+    background-color: red;
+    color: white;
+}
+#main-button2:hover{
+    background-color: red;
+    color: white;
+}
+#main-button3:hover{
+    background-color: red;
+    color: white;
+}
+#main-button4:hover{
+    background-color: red;
+    color: white;
+}
+#main-button5:hover{
+    background-color: red;
+    color: white;
+}
+/* Add this CSS code to your stylesheet */
+
+/* Add this CSS code to your stylesheet */
+body::after {
+    content: "Extra small: <576px";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: black;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    z-index: 1000;
+}
+
+
+@media (min-width: 576px) {
+  body::after {
+    content: "Small: ≥576px";
+}
+}
+  
+@media (min-width: 768px) {
+body::after {
+    content: "Medium: ≥768px";
+}
+}
+  
+@media (min-width: 992px) {
+body::after {
+      content: "Large: ≥992px";
+}
+}
+  
+@media (min-width: 1200px) {
+body::after {
+    content: "Extra Large: ≥1200px";
+}
+}
+  
+@media (min-width: 1400px) {
+body::after {
+    content: "XXL: ≥1400px";
+}
+}
+
+@media (max-width: 1199.98px) {
+    #main-page {
+        display: flex;
+        flex-direction: column; /* Stack main-page children vertically */
+        align-items: center;   /* Center horizontally */
+        gap: 20px;             /* Add spacing between items */
+    }
+
+    #dp-designation-container {
+        margin: 0; /* Reset margins for stacking */
+        position: relative; /* Ensure normal flow */
+    }
+
+    #my-name-pic-container {
+        margin: 0; /* Reset margins */
+        position: relative; /* Ensure normal flow */
+        width: auto; /* Let the width adapt */
+    }
+
+    #main-content-background-pic-container {
+        margin: 0; /* Reset margins */
+        position: relative; /* Ensure normal flow */
+        width: auto; /* Let the width adapt */
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+        align-items: center;    /* Center content horizontally */
+        gap: 20px;              /* Add spacing between items */
+        padding: 20px;          /* Optional: Add padding for better spacing */
+    }
+
+    #about-me-skills {
+        margin: 0; /* Reset margins */
+        position: relative; /* Ensure normal flow */
+        width: auto; /* Let the width adapt */
+        text-align: center; /* Center text inside */
+        margin-top: -900px;
+    }
+
+    .buttons-mainpage-container {
+        margin: 0; /* Reset margins */
+        position: relative; /* Ensure normal flow */
+        width: auto; /* Adapt width to content */
+        align-items: center; /* Center buttons */
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Add spacing between buttons */
+    }
+
+    .buttons-mainpage-container button {
+        text-align: center; /* Center text in buttons */
+        width: 100%; /* Ensure buttons take full width of container */
+        
+    }
+}

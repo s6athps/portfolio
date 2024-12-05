@@ -1,0 +1,210 @@
+#odeyssey-background-containiner{
+    width: 100%; /* Use the viewport width explicitly */
+    height: 1000px; /* Use the viewport height explicitly */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+#odeyssey-background-containiner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    max-width: 100%; /* Prevents the image from exceeding the container width */
+   
+}
+
+#odyssey-title-container{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -890px;
+    background-color: rgba(177, 181, 49, 0.5); /* semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply blur to the background */
+    position: relative;
+}
+#odyssey-title-container{
+    font-size: 35px;
+    font-weight: bolder;
+    
+}
+#odyssey-content-dummy1{
+
+    margin-top: -600px;
+    background-color: rgb(59, 144, 79);
+
+}
+#odyssey-content-dummy2{
+    
+    margin-top: -600px;
+    background-color: rgb(200, 255, 0); /* Maintain the background color */
+}
+#odyssey-content-dummy2 span{
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+
+/*---------------------------------------*/
+/* Add this CSS code to your stylesheet to check the current screen size */
+body::after {
+    content: "Extra small: <576px";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: black;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    z-index: 1000;
+  }
+  
+  @media (min-width: 576px) {
+    body::after {
+      content: "Small: ≥576px";
+    }
+  }
+  
+  @media (min-width: 768px) {
+    body::after {
+      content: "Medium: ≥768px";
+    }
+  }
+  
+  @media (min-width: 992px) {
+    body::after {
+      content: "Large: ≥992px";
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    body::after {
+      content: "Extra Large: ≥1200px";
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    body::after {
+      content: "XXL: ≥1400px";
+    }
+  }
+  @media (max-width: 991px) { /* Medium screens and below */
+    #academic-details-container {
+        flex-direction: column; /* Stack containers vertically */
+        align-items: center; /* Center align vertically stacked elements */
+        gap: 20px; /* Add spacing between elements */
+    }
+
+    #sslc-text-container,
+    #hsc-text-container,
+    #higher-text-contaiener {
+        width: 80%; /* Adjust width to make it responsive */
+    }
+}
+
+#odyssey-content-dummy2 {
+    height: 400px; /* Default height */
+    background-color: rgba(170, 163, 29, 0.5); /* semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply blur to the background */
+    align-items: center;
+    display: flex;
+
+}
+
+/* For screens ≥1400px (XXL) */
+@media (min-width: 1400px) {
+    #odyssey-content-dummy2 {
+        height: 470px;
+    }
+}
+
+/* For screens ≥1200px (XL) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    #odyssey-content-dummy2 {
+        height: 520px;
+    }
+}
+
+/* For screens ≥992px (LG) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    #odyssey-content-dummy2 {
+        height: 550px;
+    }
+}
+
+/* For screens ≥768px (MD) */
+@media (min-width: 768px) and (max-width: 991px) {
+    #odyssey-content-dummy2 {
+        height: 570px;
+    }
+}
+
+/* For screens ≥576px (SM) */
+@media (min-width: 576px) and (max-width: 767px) {
+    #odyssey-content-dummy2 {
+        height: 650px;
+    }
+}
+
+/* For screens <576px (XS) */
+@media (max-width: 575px) {
+    #odyssey-content-dummy2 {
+        height: 750px !important;
+    }
+}
+
+/*-----------------------------------------*/
+
+
+#odyssey-content-dummy1 {
+    height: 400px; /* Default height */
+    background-color: rgba(3, 209, 16, 0.5); /* semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply blur to the background */
+
+}
+
+/* For screens ≥1400px (XXL) */
+@media (min-width: 1400px) {
+    #odyssey-content-dummy1 {
+        height: 470px;
+    }
+}
+
+/* For screens ≥1200px (XL) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    #odyssey-content-dummy1 {
+        height: 520px;
+    }
+}
+
+/* For screens ≥992px (LG) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    #odyssey-content-dummy1 {
+        height: 550px;
+    }
+}
+
+/* For screens ≥768px (MD) */
+@media (min-width: 768px) and (max-width: 991px) {
+    #odyssey-content-dummy1 {
+        height: 570px;
+    }
+}
+
+/* For screens ≥576px (SM) */
+@media (min-width: 576px) and (max-width: 767px) {
+    #odyssey-content-dummy1 {
+        height: 650px;
+    }
+}
+
+/* For screens <576px (XS) */
+@media (max-width: 575px) {
+    #odyssey-content-dummy1 {
+        height: 750px !important;
+    }
+}

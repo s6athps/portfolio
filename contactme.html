@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="contactme.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <div id="contact-background-image-container">
+        <img src="IMG_2326.JPG" alt="">
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6"></div>
+    <div class="container col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+        <div id="contact-me-text">
+          <h2 style="color: rgb(112, 64, 5);">Contact Me</h2>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="column">
+            
+            <form id="submit-form" class="form-container" action="">
+
+              <label style="color: rgb(20, 20, 20);" for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Your full name..">
+              <br>
+              <span style="margin-left: 100px;" id="fullNameError" class="error"></span>
+              <br><br>
+
+              <label style="color: rgb(0, 0, 0);" for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Your Email..">
+              <br>
+              <span style="margin-left: 100px;" id="emailError" class="error"></span>
+              <br><br>
+            
+              <label style="color: rgb(0, 0, 0);" for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+              </select>
+              <br><br>
+              <label style="color: rgb(5, 5, 5);" for="message">Message</label>
+              <br><br>
+              <textarea id="message" name="message" placeholder="Write something.." style="height:170px"></textarea>
+              <br>
+              <span id="messageError" class="error"></span>
+              <br><br>
+
+              <input id="form-contme-submit" type="submit" value="Submit">
+            </form>
+            
+          </div>
+        </div>
+    </div>
+    <div class="form-container col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+
+    <script>
+        // Validate and submit the form using jQuery
+        $("#submit-form").submit(function(e) {
+            e.preventDefault();  // Prevent the form from submitting automatically
+
+            // Get values from the form fields
+            const fullName = $("#fullName").val().trim();
+            const email = $("#email").val().trim();
+            const message = $("#message").val().trim();
+
+            // Get error elements
+            const fullNameError = $("#fullNameError");
+            const emailError = $("#emailError");
+            const messageError = $("#messageError");
+
+            // Reset errors
+            fullNameError.text("");
+            emailError.text("");
+            messageError.text("");
+
+            let isValid = true;
+
+            // Validate Full Name
+            if (fullName === "") {
+                fullNameError.text("Full Name cannot be empty.");
+                isValid = false;
+            } else if (!/^[a-zA-Z\s]+$/.test(fullName)) {
+                fullNameError.text("Full Name can only contain letters and spaces.");
+                isValid = false;
+            }
+
+            // Validate Email
+            if (email === "") {
+                emailError.text("Email cannot be empty.");
+                isValid = false;
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                emailError.text("Please enter a valid email address.");
+                isValid = false;
+            }
+
+            // Validate Message
+            if (message === "") {
+                messageError.text("Message cannot be empty.");
+                isValid = false;
+            }
+
+            // If form is valid, submit using AJAX
+            if (isValid) {
+                $.ajax({
+                    url: "https://script.google.com/macros/s/AKfycbyzhXfg-j_-6sS8evwEi2NqKNtNxHdTRy0hwBD_BxpsAVMhThqMYFNme23rlJLz9Sro/exec",
+                    data: $("#submit-form").serialize(),
+                    method: "post",
+                    success: function(response) {
+                        alert("Form submitted successfully");
+                        window.location.reload();
+                        // window.location.href = "https://google.com";
+                    },
+                    error: function(err) {
+                        alert("Something went wrong");
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
